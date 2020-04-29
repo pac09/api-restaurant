@@ -18,9 +18,11 @@ module.exports = function(context, req) {
         },
         (err, result) => {
             if (err) throw err;
+            
             context.res = {
-            body: order
+                body: order
             };
+
             database.close();
             context.done();
         });
